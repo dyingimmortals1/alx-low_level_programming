@@ -1,24 +1,32 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
-
 /**
- * main - print if the number is positive, zero, or negative
- *
+ * main - printing numbers from 0-9 with commas and space between them
  * Description: using the main function
- * this program prints "Programming is positive, zero, or negative
+ * this program prints "0, 1, 2, 3, 4, 5, 6, 7, 8, 9"
  * Return: 0
  */
 int main(void)
 {
-	int n;
+	int c;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
-	if (n > 0)
+	for (c = 48; c <= 57; c++)
 	{
-		printf("%i is positive\n", n);
+		putchar(c);
+		if (c != 57)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
+	putchar('\n');
 	return (0);
 }
+printf("%i is zero\n", n);
+}
+else if (n < 0)
+{
+	printf("%i is negative\n", n);
+}
+return (0);
+}
+
